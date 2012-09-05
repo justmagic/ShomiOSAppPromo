@@ -1,0 +1,118 @@
+html, body, .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+body {
+  min-height: 600px;
+}
+.head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  white-space: nowrap;
+  top: 50px;
+  bottom: 75px;
+}
+.fixie9 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.content {
+  position: relative;
+}
+.content .block-link {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.content .block-link img {
+  border: none;
+}
+.content .block-link:hover {
+  border-color: #014077;
+}
+.content .appstore-button-container {
+  padding-left: 235px;
+}
+.content .sharing {
+  font-size: 0px;
+  text-align: center;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+.content .sharing .social-net {
+  display: inline-block;
+  height: 20px;
+  width: 120px;
+  text-align: left;
+}
+.content, .content .ipad-sc, .content .title {
+  display: inline-block;
+  vertical-align: middle;
+}
+.content .inline-block {
+  display: inline-block;
+}
+.content .title {
+  margin-right: 30px;
+  padding-right: 30px;
+  text-align: right;
+  border-right: 1px solid #dbe2ec;
+  height: 420px;
+}
+.content .title .app-name {
+  color: #014077;
+  text-shadow: 0px 1px 1px black;
+  font-size: 50px;
+  line-height: 70px;
+}
+.content .title .h-line {
+  text-align: center;
+}
+.content .title .h-line span {
+  display: inline-block;
+  width: 20%;
+  border-top: 1px solid #dbe2ec;
+}
+.content .title .devices {
+  margin: 20px 0px;
+  font-size: 30px;
+  color: #5b8cb6;
+}
+.content .title .app-infos {
+  margin: 20px 0px;
+  color: #5b8cb6;
+}
+.content .title .app-infos .hl {
+  color: #001b56;
+  font-weight: bold;
+  font-style: italic;
+}
+.content .title .ipad-sc {
+  width: 322px;
+}

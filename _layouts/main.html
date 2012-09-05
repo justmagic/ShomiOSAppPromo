@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>{{page.title}} — geogarage</title>
+    
+    {% for tag in page.opengraph %}
+    <meta property="og:{{tag.property}}" content="{{tag.content}}">
+    {% endfor %}
+    
+    <link rel="stylesheet" href="stylesheets/base.css">
+    {% for css in page.stylesheets %}
+    <link rel="stylesheet" href="{{css}}">
+    {% endfor %}
+    
+    <script type="text/javascript" defer>
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-883814-14']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+
+  </head>
+  <body>
+    <div class="head {{current_page_id}}">
+      
+      <a href="./" class="logo"></a>
+            <!-- 
+        mustache:data subpages
+        {
+          "handler": "TemplateList",
+          "data": [
+            { "template": "pages/application.html.mustache", "link_title": "Application", "page_id": "application", "link": "application", "file": "application.html" },
+            { "template": "pages/ref.html.mustache", "link_title": "Références cartes", "page_id": "ref", "link": "ref", "file": "ref.html" },
+            { "template": "pages/faq.html.mustache", "link_title": "FAQ", "page_id": "faq", "link": "faq", "file": "faq.html" },
+            { "template": "pages/presse.html.mustache", "link_title": "Presse", "page_id": "presse", "link": "presse", "file": "presse.html" },
+            { "template": "pages/contact.html.mustache", "link_title": "Contact", "page_id": "contact", "link": "contact", "file": "contact.html" }
+          ]
+        }
+
+      -->
+
+    </div>
+
+    {{ content }}
+
+    <div class="footer">
+      Copyright © MIS - 2012
+    </div>
+  </body>
+</html>
