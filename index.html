@@ -18,7 +18,7 @@ stylesheets:
 
 <div id="fb-root"></div> 
 <script defer>(function(d, s, id) {   var js, fjs = d.getElementsByTagName(s)[0];   if (d.getElementById(id)) return;   js = d.createElement(s); js.id = id;   js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";   fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
-
+{% if site.app_published == false %}
 <script type="text/javascript">
 window.onload = function() {
   var openFormElement = document.getElementById('touch-button');
@@ -47,14 +47,18 @@ window.onload = function() {
   }
 }
 </script>
-
+{% endif %}
 
 <div class="container">
   <div class="fixie9">
     <span class="v-center">
     </span>
     <span class="content">
+      {% if site.app_published %}
+      <a class="block-link" href="{{ site.app_itunes_url }}">
+      {% else %}
       <div>
+      {% endif %}
         <span class="title">
           <div class="app-name">
             <div>Carte</div><div>Marine</div><div>France</div>
@@ -72,7 +76,13 @@ window.onload = function() {
 
         
         <img class="ipad-sc" src="images/ipad.png">
-      </div>
+      {% if site.app_published %}
+      </a>
+      {% else %}
+      <div>
+      {% endif %}
+
+      {% if site.app_published == false %}
       <div class="soon-cont">
         <span class="v-center"></span>
         <span class="soon">Bientôt disponible sur l'App Store</span>
@@ -81,6 +91,8 @@ window.onload = function() {
         <span class="touch-title">Restez en contact !</span>
         <span class="sub-text">Pour être informé lorsque l'application sera disponible,  <span class="looks-cliquable">cliquez ici pour laisser votre email</span></span>
       </div>
+      {% endif %}
+
       <div class="sharing">
         <span class="social-net">
           <a href="https://twitter.com/share" class="twitter-share-button" data-via="geogarage" data-lang="fr">Tweeter</a>
