@@ -1,3 +1,23 @@
+---
+subpages:
+- link_title: Application
+  link: application
+  page_id: application
+- link_title: "R\xC3\xA9f\xC3\xA9rences cartes"
+  link: ref
+  page_id: ref
+- link_title: FAQ
+  link: faq
+  file: faq.html
+  page_id: faq
+- link_title: Presse
+  link: presse
+  page_id: presse
+- link_title: Contact
+  link: contact
+  page_id: contact
+---
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -33,23 +53,12 @@
 
   </head>
   <body>
-    <div class="head {{current_page_id}}">
+    <div class="head {{page.current_page_id}}">
       
       <a href="./" class="logo"></a>
-            <!-- 
-        mustache:data subpages
-        {
-          "handler": "TemplateList",
-          "data": [
-            { "template": "pages/application.html.mustache", "link_title": "Application", "page_id": "application", "link": "application", "file": "application.html" },
-            { "template": "pages/ref.html.mustache", "link_title": "Références cartes", "page_id": "ref", "link": "ref", "file": "ref.html" },
-            { "template": "pages/faq.html.mustache", "link_title": "FAQ", "page_id": "faq", "link": "faq", "file": "faq.html" },
-            { "template": "pages/presse.html.mustache", "link_title": "Presse", "page_id": "presse", "link": "presse", "file": "presse.html" },
-            { "template": "pages/contact.html.mustache", "link_title": "Contact", "page_id": "contact", "link": "contact", "file": "contact.html" }
-          ]
-        }
-
-      -->
+      {% for subpage in page.subpages %}
+      <a href="{{subpage.link}}" class="{{subpage.page_id}}">{{subpage.link_title}}</a>
+      {% endfor %}
 
     </div>
 

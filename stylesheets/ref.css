@@ -1,0 +1,72 @@
+.centered-block {
+  width: 700px;
+  margin: 30px;
+}
+.text-content {
+  line-height: 22px;
+  font-size: 15px;
+}
+.text-content h2 {
+  font-size: 15px;
+}
+.text-content .pgh {
+  margin: 10px 0px;
+}
+/*
+<div class="cht-table">
+  {{#charts}}
+  <div class="cht-row">
+    {{^head}}
+    <a href="http://www.shom.fr/fr_page/fr_prod_cartes/cc/cataligne/carte_{{id}}.htm">
+    {{/head}}
+    {{#head}}
+    <a>
+    {{/head}}
+      <span class="id">{{id}}</span>
+      <span class="name">{{name}}</span>
+      <span class="scale"><span class="v-centerer"></span>{{scale}}</span>
+    </a>
+  </div>
+  {{/charts}}
+</div>
+
+*/
+.cht-table {
+  margin: 20px 0px;
+  font-size: 12px;
+}
+.cht-table .cht-row {
+  white-space: nowrap;
+  position: relative;
+}
+.cht-table .cht-row a {
+  display: block;
+  color: #001b56;
+  text-decoration: none;
+}
+.cht-table .cht-row a:hover span {
+  text-decoration: underline;
+}
+.cht-table .cht-row.tbl-head a {
+  font-weight: bold;
+}
+.cht-table .cht-row.tbl-head a:hover {
+  text-decoration: none;
+}
+.cht-table .cht-row .v-centerer {
+  line-height: 100%;
+}
+.cht-table .cht-row .id {
+  display: inline-block;
+  width: 40px;
+  padding-left: 3px;
+}
+.cht-table .cht-row .scale {
+  position: absolute;
+  display: inline-block;
+  padding-right: 3px;
+  right: 0;
+}
+.cht-table .cht-row:nth-child(2n+1) {
+  background-color: #f2f5f8;
+}

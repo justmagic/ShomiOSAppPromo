@@ -1,0 +1,31 @@
+.centered-content {
+  margin: 50px 0px;
+}
+.contact-info {
+  color: #014077;
+}
+.contact-info .siret {
+  font-size: 13px;
+  font-style: italic;
+  color: #5b8cb6;
+}
+.contact-info .address {
+  margin: 10px 0px;
+}
+.contact-info .infos {
+  white-space: nowrap;
+  position: relative;
+}
+.contact-info .put-left {
+  overflow: visible;
+  position: absolute;
+  width: 0;
+  left: 0;
+}
+.contact-info .info-names {
+  position: absolute;
+  right: 0;
+  color: #5b8cb6;
+  text-align: right;
+  padding-right: 3px;
+}

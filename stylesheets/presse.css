@@ -1,0 +1,39 @@
+h1 {
+  font-size: 22px;
+}
+.footer {
+  margin-top: 75px;
+}
+.centered-block {
+  width: 500px;
+  margin: 30px;
+}
+.press-content div {
+  margin: 10px 0px;
+}
+.press-content div.about {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #dbe2ec;
+  font-style: italic;
+}
+.press-content div.about .about-title {
+  font-weight: bold;
+  font-size: 15px;
+}
+.press-content div.about .about-contacts {
+  background-color: #f2f5f8;
+  padding: 10px;
+  margin: 20px 0px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  font-style: normal;
+}
+.press-content div.about .about-contacts div {
+  color: #014077;
+  margin: 0px;
+}
+.press-content div.about .about-contacts div.info {
+  color: inherit;
+}

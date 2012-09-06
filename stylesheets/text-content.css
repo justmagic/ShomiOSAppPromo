@@ -1,0 +1,14 @@
+.centered-block {
+  width: 700px;
+  margin: 30px;
+}
+.text-content {
+  line-height: 22px;
+  font-size: 15px;
+}
+.text-content h2 {
+  font-size: 15px;
+}
+.text-content .pgh {
+  margin: 10px 0px;
+}

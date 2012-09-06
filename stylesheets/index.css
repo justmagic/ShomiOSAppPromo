@@ -8,6 +8,41 @@ html, body, .overlay {
 body {
   min-height: 600px;
 }
+body .overlay {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVQIHWNgqAcAAIIAgNf3KfoAAAAASUVORK5CYII=");
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+body .overlay .frame-container {
+  display: inline-block;
+  position: relative;
+  box-shadow: 0px 4px 20px -2px #000000;
+  background: white;
+  text-align: left;
+  margin-right: 20px;
+}
+body .overlay .frame-container .close-form {
+  display: inline-block;
+  line-height: 12px;
+  padding-bottom: 3px;
+  width: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid;
+  border-radius: 2px;
+  text-decoration: none;
+}
+body .overlay .frame-container .close-form:visited {
+  color: inherit;
+}
+body .overlay .frame-container iframe {
+  width: 580px;
+  height: 400px;
+}
 .head {
   position: absolute;
   top: 0;
@@ -43,21 +78,46 @@ body {
 .content {
   position: relative;
 }
-.content .block-link {
+.content .soon-cont {
+  position: absolute;
+  right: -100px;
+  top: 150px;
+  display: inline-block;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 23px;
+  line-height: 35px;
+  color: white;
+  text-shadow: 1px 1px 3px #80551e;
+  height: 225px;
+  width: 225px;
+  background-image: url("../images/soon.png");
+}
+.content .soon-cont .soon {
+  white-space: normal;
+  display: inline-block;
+  vertical-align: middle;
+  width: 175px;
+}
+.content .in-touch {
+  font-size: 12px;
+  text-align: right;
+}
+.content .in-touch .touch-title {
   display: block;
-  text-decoration: none;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid transparent;
+  font-weight: bold;
 }
-.content .block-link img {
-  border: none;
+.content .in-touch .sub-text {
+  font-size: 11px;
+  color: #014077;
+  display: inline-block;
+  white-space: normal;
+  width: 225px;
+  letter-spacing: 1px;
 }
-.content .block-link:hover {
-  border-color: #014077;
-}
-.content .appstore-button-container {
-  padding-left: 235px;
+.content .in-touch .sub-text .looks-cliquable {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .content .sharing {
   font-size: 0px;

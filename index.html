@@ -14,18 +14,47 @@ opengraph:
   content: http://carte-france.geogarage.com/
 stylesheets:
  - stylesheets/index.css
- - stylesheets/appstore-button.css
 ---
 
 <div id="fb-root"></div> 
 <script defer>(function(d, s, id) {   var js, fjs = d.getElementsByTagName(s)[0];   if (d.getElementById(id)) return;   js = d.createElement(s); js.id = id;   js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";   fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript">
+window.onload = function() {
+  var openFormElement = document.getElementById('touch-button');
+  openFormElement.onclick = function(event) {
+    var overlay = document.createElement('div');
+    overlay.className = "overlay";
+    document.body.appendChild(overlay);
+    var vcenter = document.createElement('span');
+    vcenter.className = "v-center";
+    overlay.appendChild(vcenter);
+    document.body.appendChild(overlay);
+    var container = document.createElement('span');
+    container.className = 'frame-container';
+    container.innerHTML = '<iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dFFRek9YWl91RlR5NTFodENqa09KZFE6MQ" scrolling="no" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>'
+
+    var annuler = document.createElement('a');
+    annuler.setAttribute('href', 'javascript:;');
+    annuler.className = "close-form";
+    annuler.innerHTML = '&times;';
+    container.appendChild(annuler);
+
+    overlay.appendChild(container);
+    overlay.onclick = function(event) {
+      overlay.parentNode.removeChild(overlay);
+    }
+  }
+}
+</script>
+
 
 <div class="container">
   <div class="fixie9">
     <span class="v-center">
     </span>
     <span class="content">
-      <a class="block-link" href="http://itunes.apple.com/app/carte-marine-france/id525398644?ls=1&mt=8">
+      <div>
         <span class="title">
           <div class="app-name">
             <div>Carte</div><div>Marine</div><div>France</div>
@@ -43,10 +72,15 @@ stylesheets:
 
         
         <img class="ipad-sc" src="images/ipad.png">
-        <div class="appstore-button-container">
-          <span class="appstore-button"></span>
-        </div>
-      </a>
+      </div>
+      <div class="soon-cont">
+        <span class="v-center"></span>
+        <span class="soon">Bientôt disponible sur l'App Store</span>
+      </div>
+      <div class="in-touch" id="touch-button">
+        <span class="touch-title">Restez en contact !</span>
+        <span class="sub-text">Pour être informé lorsque l'application sera disponible,  <span class="looks-cliquable">cliquez ici pour laisser votre email</span></span>
+      </div>
       <div class="sharing">
         <span class="social-net">
           <a href="https://twitter.com/share" class="twitter-share-button" data-via="geogarage" data-lang="fr">Tweeter</a>
